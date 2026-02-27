@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-card">
+            <!-- Header with title -->
+            <header class="calculator-header">
+                <h1>Calculator</h1>
+                <!-- Optional: Theme toggle (uncomment to enable) -->
+                <!-- <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button> -->
+            </header>
+
+            <!-- Display Section -->
+            <div class="display-container">
+                <div class="expression-display" id="expression" aria-live="polite"></div>
+                <div class="result-display" id="result" aria-live="polite">0</div>
+            </div>
+
+            <!-- Scientific Functions Section (toggleable) -->
+            <div class="scientific-section" id="scientific-section">
+                <div class="scientific-row">
+                    <button class="btn scientific" data-value="sin(" aria-label="Sine">sin</button>
+                    <button class="btn scientific" data-value="cos(" aria-label="Cosine">cos</button>
+                    <button class="btn scientific" data-value="tan(" aria-label="Tangent">tan</button>
+                    <button class="btn scientific" data-value="log(" aria-label="Logarithm base 10">log</button>
+                    <button class="btn scientific" data-value="ln(" aria-label="Natural logarithm">ln</button>
+                </div>
+                <div class="scientific-row">
+                    <button class="btn scientific" data-value="sqrt(" aria-label="Square root">√</button>
+                    <button class="btn scientific" data-value="pow(" aria-label="Power">x²</button>
+                    <button class="btn scientific" data-value="PI" aria-label="Pi">π</button>
+                    <button class="btn scientific" data-value="E" aria-label="Euler's number">e</button>
+                    <button class="btn scientific" data-value="(" aria-label="Open parenthesis">(</button>
+                </div>
+                <div class="scientific-row">
+                    <button class="btn scientific" data-value=")" aria-label="Close parenthesis">)</button>
+                    <button class="btn scientific" data-value="^" aria-label="Exponent">^</button>
+                    <button class="btn scientific" data-value="factorial(" aria-label="Factorial">n!</button>
+                    <button class="btn scientific" data-value="abs(" aria-label="Absolute value">|x|</button>
+                    <button class="btn scientific" data-value="deg(" aria-label="Degrees to radians">DEG</button>
+                </div>
+            </div>
+
+            <!-- Main Calculator Buttons -->
+            <div class="buttons-container">
+                <div class="button-row">
+                    <button class="btn function" data-action="clear" aria-label="Clear all">AC</button>
+                    <button class="btn function" data-action="delete" aria-label="Delete last character">DEL</button>
+                    <button class="btn operator" data-value="%" aria-label="Percentage">%</button>
+                    <button class="btn operator" data-value="/" aria-label="Divide">÷</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn number" data-value="7" aria-label="Seven">7</button>
+                    <button class="btn number" data-value="8" aria-label="Eight">8</button>
+                    <button class="btn number" data-value="9" aria-label="Nine">9</button>
+                    <button class="btn operator" data-value="*" aria-label="Multiply">×</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn number" data-value="4" aria-label="Four">4</button>
+                    <button class="btn number" data-value="5" aria-label="Five">5</button>
+                    <button class="btn number" data-value="6" aria-label="Six">6</button>
+                    <button class="btn operator" data-value="-" aria-label="Subtract">−</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn number" data-value="1" aria-label="One">1</button>
+                    <button class="btn number" data-value="2" aria-label="Two">2</button>
+                    <button class="btn number" data-value="3" aria-label="Three">3</button>
+                    <button class="btn operator" data-value="+" aria-label="Add">+</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn number" data-value="0" aria-label="Zero">0</button>
+                    <button class="btn number" data-value="." aria-label="Decimal point">.</button>
+                    <button class="btn function" data-action="toggle-scientific" aria-label="Toggle scientific functions">📊</button>
+                    <button class="btn equals" data-action="calculate" aria-label="Calculate result">=</button>
+                </div>
+            </div>
+
+            <!-- History Panel -->
+            <div class="history-panel" id="history-panel">
+                <div class="history-header">
+                    <h3>History</h3>
+                    <button id="clear-history" class="btn-small" aria-label="Clear history">Clear</button>
+                </div>
+                <ul id="history-list"></ul>
+            </div>
+
+            <!-- Memory Indicators (optional - uncomment to enable) -->
+            <!-- <div class="memory-indicators">
+                <span id="memory-indicator" class="memory-badge">M</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
